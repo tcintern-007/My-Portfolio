@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad Adeel | Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <link href="./dist/output.css" rel="stylesheet" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- ============================================
+    NAVIGATION
+    ============================================ -->
+    <nav class="nav-glass fixed top-0 left-0 w-full z-50 h-[70px] transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-full flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#home" class="text-2xl font-extrabold text-accent">
+                M<span class="text-theme-primary">A</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <ul class="hidden md:flex items-center gap-8 h-full">
+                <li><a href="#about" class="nav-link-desktop nav-link text-theme-secondary hover:text-theme-primary font-medium transition-colors duration-300">About</a></li>
+                <li><a href="#skills" class="nav-link-desktop nav-link text-theme-secondary hover:text-theme-primary font-medium transition-colors duration-300">Skills</a></li>
+                <li><a href="#projects" class="nav-link-desktop nav-link text-theme-secondary hover:text-theme-primary font-medium transition-colors duration-300">Projects</a></li>
+                <li><a href="#education" class="nav-link-desktop nav-link text-theme-secondary hover:text-theme-primary font-medium transition-colors duration-300">Education</a></li>
+                <li><a href="#contact" class="nav-link-desktop nav-link text-theme-secondary hover:text-theme-primary font-medium transition-colors duration-300">Contact</a></li>
+                <li>
+                    <div class="flex gap-1.5">
+                        <button data-theme="dark" class="theme-btn active" aria-label="Dark theme" title="Dark">
+                            <i class="fas fa-moon text-sm"></i>
+                        </button>
+                        <button data-theme="light" class="theme-btn" aria-label="Light theme" title="Light">
+                            <i class="fas fa-sun text-sm"></i>
+                        </button>
+                        <button data-theme="blue" class="theme-btn" aria-label="Blue theme" title="Blue">
+                            <i class="fas fa-water text-sm"></i>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Hamburger -->
+            <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-1.5" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="w-7 h-0.5 bg-theme-primary transition-all duration-300"></span>
+                <span class="w-7 h-0.5 bg-theme-primary transition-all duration-300"></span>
+                <span class="w-7 h-0.5 bg-theme-primary transition-all duration-300"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden glass border-t border-theme px-6 py-6 flex flex-col gap-4 text-center">
+            <a href="#about" class="text-theme-secondary hover:text-accent font-medium transition-colors">About</a>
+            <a href="#skills" class="text-theme-secondary hover:text-accent font-medium transition-colors">Skills</a>
+            <a href="#projects" class="text-theme-secondary hover:text-accent font-medium transition-colors">Projects</a>
+            <a href="#education" class="text-theme-secondary hover:text-accent font-medium transition-colors">Education</a>
+            <a href="#contact" class="text-theme-secondary hover:text-accent font-medium transition-colors">Contact</a>
+            <div class="flex justify-center gap-2 pt-2 border-t border-theme">
+                <button data-theme="dark" class="theme-btn active" aria-label="Dark theme"><i class="fas fa-moon text-sm"></i></button>
+                <button data-theme="light" class="theme-btn" aria-label="Light theme"><i class="fas fa-sun text-sm"></i></button>
+                <button data-theme="blue" class="theme-btn" aria-label="Blue theme"><i class="fas fa-water text-sm"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+    HERO SECTION
+    ============================================ -->
+    <section id="home" class="min-h-screen flex items-center pt-[90px] pb-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-2">
+                        Muhammad <span class="text-accent">Adeel</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-theme-secondary font-medium mb-3">
+                        Full Stack MERN &amp; Java Developer
+                    </p>
+                    <p class="text-theme-secondary max-w-lg mx-auto md:mx-0 mb-7 leading-relaxed">
+                        I build modern, scalable, and user-focused applications.<br />
+                        Transforming complex problems into elegant, highly usable software products.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                        <a href="#contact" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i> Contact Me
+                        </a>
+                        <a href="#projects" class="btn-outline">
+                            <i class="fas fa-code"></i> View Projects
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-accent avatar-glow bg-theme-card">
+                        <img src="./assets/images/Adeel.jpeg" alt="Muhammad Adeel" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+    ABOUT SECTION
+    ============================================ -->
+    <section id="about" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-3">
+                About <span class="text-accent">Me</span>
+            </h2>
+            <p class="text-center text-theme-secondary max-w-2xl mx-auto mb-12">
+                Get to know the person behind the code
+            </p>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <p class="text-theme-secondary text-lg leading-relaxed mb-4">
+                        I am a Software Engineer and MERN developer focused on building impactful digital products.
+                        With a strong foundation in both web and desktop application development, I bridge the gap
+                        between design and engineering. My passion lies in architecting systems that are not only
+                        scalable and efficient under the hood, but also incredibly intuitive and engaging for the end user.
+                    </p>
+                    <p class="text-theme-secondary text-lg leading-relaxed">
+                        Currently, I am expanding my horizons into Android App Development to deliver seamless
+                        cross-platform experiences. My ultimate career goal is to build my own software products
+                        that solve genuine problems at a global scale.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 mt-8">
+                        <div class="bg-theme-card p-5 rounded-2xl border border-theme text-center card-hover">
+                            <i class="fas fa-code text-3xl text-accent mb-2 block"></i>
+                            <h4 class="font-semibold text-theme-primary">MERN Stack</h4>
+                            <p class="text-sm text-theme-secondary">Building responsive web apps.</p>
+                        </div>
+                        <div class="bg-theme-card p-5 rounded-2xl border border-theme text-center card-hover">
+                            <i class="fas fa-desktop text-3xl text-accent mb-2 block"></i>
+                            <h4 class="font-semibold text-theme-primary">Java Desktop</h4>
+                            <p class="text-sm text-theme-secondary">Robust system development.</p>
+                        </div>
+                        <div class="bg-theme-card p-5 rounded-2xl border border-theme text-center card-hover">
+                            <i class="fas fa-mobile-alt text-3xl text-accent mb-2 block"></i>
+                            <h4 class="font-semibold text-theme-primary">Learning</h4>
+                            <p class="text-sm text-theme-secondary">Android App Development.</p>
+                        </div>
+                    </div>
+                </div>
+                <div><!-- Empty for spacing --></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+    SKILLS SECTION
+    ============================================ -->
+    <section id="skills" class="py-20 bg-theme-secondary transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-3">
+                My <span class="text-accent">Skills</span>
+            </h2>
+            <p class="text-center text-theme-secondary max-w-2xl mx-auto mb-12">
+                Technologies &amp; tools I work with
+            </p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Programming Languages -->
+                <div class="bg-theme-card p-7 rounded-2xl border border-theme card-hover">
+                    <h3 class="text-lg font-semibold text-accent mb-3 flex items-center gap-2">
+                        <i class="fas fa-laptop-code"></i> Programming Languages
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-4 py-1.5 bg-theme-primary rounded-full text-sm text-theme-secondary border border-theme">C++</span>
+                        <span class="skill-tag px-4 py-1.5 bg-theme-primary rounded-full text-sm text-theme-secondary border border-theme">Java</span>
+                        <span class="skill-tag px-4 py-1.5 bg-theme-primary rounded-full text-sm text-theme-secondary border border-theme">JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="bg-theme-card p-7 rounded-2xl border border-theme card-hover">
+                    <h3 class="text-lg font-semibold text-accent mb-3 flex items-center gap-2">
+                        <i class="fas fa-globe"></i> Web Development
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-4 py-1.5 bg-theme-primary rounded-full text-sm text-theme-secondary border border-theme">React.js</span>
+                        <span class="skill-tag px-4 py-1.5 bg-theme-primary rounded-full text-sm text-theme-secondary border border-theme">Next.js</span>
+                        <span class="skill-tag px-4 py-1.5 bg-theme-primary rounded-full text-sm text-theme-secondary border border-theme">Express.js</span>
+                        <span class="skill-tag px-4 py-1.5 bg-theme-primary rounded-full text-sm text-theme-secondary border border-theme">MongoDB</span>
+                        <span class="skill-tag px-4 py-1.5 bg-theme-primary rounded-full text-sm text-theme-secondary border border-theme">MySQL</span>
+                        <span class="skill-tag px-4 py-1.5 bg-theme-primary rounded-full text-sm text-theme-secondary border border-theme">Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Design -->
+                <div class="bg-theme-card p-7 rounded-2xl border border-theme card-hover">
+                    <h3 class="text-lg font-semibold text-accent mb-3 flex items-center gap-2">
+                        <i class="fas fa-tools"></i> Tools &amp; Design
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-4 py-1.5 bg-theme-primary rounded-full text-sm text-theme-secondary border border-theme">VS Code</span>
+                        <span class="skill-tag px-4 py-1.5 bg-theme-primary rounded-full text-sm text-theme-secondary border border-theme">Git</span>
+                        <span class="skill-tag px-4 py-1.5 bg-theme-primary rounded-full text-sm text-theme-secondary border border-theme">GitHub</span>
+                        <span class="skill-tag px-4 py-1.5 bg-theme-primary rounded-full text-sm text-theme-secondary border border-theme">Figma</span>
+                        <span class="skill-tag px-4 py-1.5 bg-theme-primary rounded-full text-sm text-theme-secondary border border-theme">HCI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+    PROJECTS SECTION
+    ============================================ -->
+    <section id="projects" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-3">
+                Featured <span class="text-accent">Projects</span>
+            </h2>
+            <p class="text-center text-theme-secondary max-w-2xl mx-auto mb-12">
+                Some of my recent work
+            </p>
+            <div class="grid md:grid-cols-2 gap-7">
+                <!-- Project 1 -->
+                <div class="bg-theme-card p-7 rounded-2xl border border-theme card-hover flex flex-col">
+                    <h3 class="text-xl font-bold text-theme-primary">DineXis</h3>
+                    <p class="text-theme-secondary text-sm font-medium mb-3">Online Web First App</p>
+                    <p class="text-theme-secondary flex-grow mb-4 leading-relaxed">
+                        A comprehensive MERN stack food delivery application featuring real-time order tracking, smart variations, and a mood-based recommendation engine.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-theme-primary rounded-full text-xs text-theme-secondary border border-theme">React</span>
+                        <span class="px-3 py-1 bg-theme-primary rounded-full text-xs text-theme-secondary border border-theme">Node.js</span>
+                        <span class="px-3 py-1 bg-theme-primary rounded-full text-xs text-theme-secondary border border-theme">Express</span>
+                        <span class="px-3 py-1 bg-theme-primary rounded-full text-xs text-theme-secondary border border-theme">MongoDB</span>
+                    </div>
+                    <div class="flex gap-4 flex-wrap">
+                        <a href="#" class="text-accent hover:text-accent-hover font-medium transition-colors inline-flex items-center gap-1 hover:translate-x-1 transform transition-transform">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="#" class="text-accent hover:text-accent-hover font-medium transition-colors inline-flex items-center gap-1 hover:translate-x-1 transform transition-transform">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-theme-card p-7 rounded-2xl border border-theme card-hover flex flex-col">
+                    <h3 class="text-xl font-bold text-theme-primary">CartSy</h3>
+                    <p class="text-theme-secondary text-sm font-medium mb-3">Online Shopping System</p>
+                    <p class="text-theme-secondary flex-grow mb-4 leading-relaxed">
+                        A robust Java-based desktop e-commerce application handling inventory management, user authentication, and secure checkout processes.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-theme-primary rounded-full text-xs text-theme-secondary border border-theme">Java</span>
+                        <span class="px-3 py-1 bg-theme-primary rounded-full text-xs text-theme-secondary border border-theme">Swing</span>
+                        <span class="px-3 py-1 bg-theme-primary rounded-full text-xs text-theme-secondary border border-theme">MySQL</span>
+                        <span class="px-3 py-1 bg-theme-primary rounded-full text-xs text-theme-secondary border border-theme">JDBC</span>
+                    </div>
+                    <div class="flex gap-4 flex-wrap">
+                        <a href="#" class="text-accent hover:text-accent-hover font-medium transition-colors inline-flex items-center gap-1 hover:translate-x-1 transform transition-transform">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-theme-card p-7 rounded-2xl border border-theme card-hover flex flex-col">
+                    <h3 class="text-xl font-bold text-theme-primary">TileDesk</h3>
+                    <p class="text-theme-secondary text-sm font-medium mb-3">Factory Management System</p>
+                    <p class="text-theme-secondary flex-grow mb-4 leading-relaxed">
+                        An industrial management system designed in Java to streamline factory operations, monitor raw materials, and track production efficiency.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-theme-primary rounded-full text-xs text-theme-secondary border border-theme">Java</span>
+                        <span class="px-3 py-1 bg-theme-primary rounded-full text-xs text-theme-secondary border border-theme">OOP</span>
+                        <span class="px-3 py-1 bg-theme-primary rounded-full text-xs text-theme-secondary border border-theme">File Handling</span>
+                    </div>
+                    <div class="flex gap-4 flex-wrap">
+                        <a href="#" class="text-accent hover:text-accent-hover font-medium transition-colors inline-flex items-center gap-1 hover:translate-x-1 transform transition-transform">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-theme-card p-7 rounded-2xl border border-theme card-hover flex flex-col">
+                    <h3 class="text-xl font-bold text-theme-primary">Bank Management System</h3>
+                    <p class="text-theme-secondary text-sm font-medium mb-3">Core Banking Engine</p>
+                    <p class="text-theme-secondary flex-grow mb-4 leading-relaxed">
+                        A highly optimized terminal-based banking application built with C++ utilizing advanced data structures for secure transaction processing.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-theme-primary rounded-full text-xs text-theme-secondary border border-theme">C++</span>
+                        <span class="px-3 py-1 bg-theme-primary rounded-full text-xs text-theme-secondary border border-theme">Data Structures</span>
+                    </div>
+                    <div class="flex gap-4 flex-wrap">
+                        <a href="#" class="text-accent hover:text-accent-hover font-medium transition-colors inline-flex items-center gap-1 hover:translate-x-1 transform transition-transform">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+    EDUCATION SECTION
+    ============================================ -->
+    <section id="education" class="py-20 bg-theme-secondary transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-3">
+                Education &amp; <span class="text-accent">Certificates</span>
+            </h2>
+            <p class="text-center text-theme-secondary max-w-2xl mx-auto mb-12">
+                My academic journey and professional certifications
+            </p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-theme-card p-7 rounded-2xl border border-theme card-hover">
+                    <h3 class="text-xl font-bold text-theme-primary">Riphah International University, Isb</h3>
+                    <p class="text-theme-secondary mb-2">BS Software Engineering &bull; Semester 5</p>
+                    <p class="text-accent font-bold text-xl">CGPA: 3.87</p>
+                </div>
+                <div class="bg-theme-card p-7 rounded-2xl border border-theme card-hover">
+                    <h3 class="text-xl font-bold text-theme-primary mb-4">Certifications</h3>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex justify-between items-center p-2.5 bg-theme-primary rounded-lg border-l-4 border-accent hover:translate-x-1 transition-all duration-300">
+                            <span class="text-theme-secondary text-sm flex items-center gap-2">
+                                <i class="fas fa-certificate text-accent"></i> Introduction to IoT
+                            </span>
+                            <a href="#" class="text-accent text-sm font-medium hover:text-accent-hover transition-colors">View PDF</a>
+                        </div>
+                        <div class="flex justify-between items-center p-2.5 bg-theme-primary rounded-lg border-l-4 border-accent hover:translate-x-1 transition-all duration-300">
+                            <span class="text-theme-secondary text-sm flex items-center gap-2">
+                                <i class="fas fa-certificate text-accent"></i> C++ Essential 2 (OOP)
+                            </span>
+                            <a href="#" class="text-accent text-sm font-medium hover:text-accent-hover transition-colors">View PDF</a>
+                        </div>
+                        <div class="flex justify-between items-center p-2.5 bg-theme-primary rounded-lg border-l-4 border-accent hover:translate-x-1 transition-all duration-300">
+                            <span class="text-theme-secondary text-sm flex items-center gap-2">
+                                <i class="fas fa-certificate text-accent"></i> C++ Advanced (Data Structures)
+                            </span>
+                            <a href="#" class="text-accent text-sm font-medium hover:text-accent-hover transition-colors">View PDF</a>
+                        </div>
+                        <div class="flex justify-between items-center p-2.5 bg-theme-primary rounded-lg border-l-4 border-accent hover:translate-x-1 transition-all duration-300">
+                            <span class="text-theme-secondary text-sm flex items-center gap-2">
+                                <i class="fas fa-certificate text-accent"></i> IT Essentials
+                            </span>
+                            <a href="#" class="text-accent text-sm font-medium hover:text-accent-hover transition-colors">View PDF</a>
+                        </div>
+                        <div class="flex justify-between items-center p-2.5 bg-theme-primary rounded-lg border-l-4 border-accent hover:translate-x-1 transition-all duration-300">
+                            <span class="text-theme-secondary text-sm flex items-center gap-2">
+                                <i class="fas fa-certificate text-accent"></i> SQL and Relational Databases
+                            </span>
+                            <a href="#" class="text-accent text-sm font-medium hover:text-accent-hover transition-colors">View PDF</a>
+                        </div>
+                        <div class="flex justify-between items-center p-2.5 bg-theme-primary rounded-lg border-l-4 border-accent hover:translate-x-1 transition-all duration-300">
+                            <span class="text-theme-secondary text-sm flex items-center gap-2">
+                                <i class="fas fa-certificate text-accent"></i> Engaging Stakeholders
+                            </span>
+                            <a href="#" class="text-accent text-sm font-medium hover:text-accent-hover transition-colors">View PDF</a>
+                        </div>
+                        <div class="flex justify-between items-center p-2.5 bg-theme-primary rounded-lg border-l-4 border-accent hover:translate-x-1 transition-all duration-300">
+                            <span class="text-theme-secondary text-sm flex items-center gap-2">
+                                <i class="fas fa-certificate text-accent"></i> Discovering Entrepreneurship
+                            </span>
+                            <a href="#" class="text-accent text-sm font-medium hover:text-accent-hover transition-colors">View PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+    CONTACT SECTION
+    ============================================ -->
+    <section id="contact" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-3">
+                Get In <span class="text-accent">Touch</span>
+            </h2>
+            <p class="text-center text-theme-secondary max-w-2xl mx-auto mb-12">
+                Have a question or want to work together? Reach out!
+            </p>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-4 bg-theme-card p-4 rounded-2xl border border-theme hover:translate-x-1.5 transition-all duration-300 hover:shadow-theme hover:border-accent">
+                        <i class="fas fa-envelope text-2xl text-accent w-7 text-center flex-shrink-0"></i>
+                        <a href="mailto:madeelkhan072@gmail.com" class="text-theme-secondary hover:text-accent transition-colors break-all">madeelkhan072@gmail.com</a>
+                    </div>
+                    <div class="flex items-center gap-4 bg-theme-card p-4 rounded-2xl border border-theme hover:translate-x-1.5 transition-all duration-300 hover:shadow-theme hover:border-accent">
+                        <i class="fas fa-phone-alt text-2xl text-accent w-7 text-center flex-shrink-0"></i>
+                        <a href="tel:03180552193" class="text-theme-secondary hover:text-accent transition-colors">0318-0552193</a>
+                    </div>
+                    <div class="flex items-center gap-4 bg-theme-card p-4 rounded-2xl border border-theme hover:translate-x-1.5 transition-all duration-300 hover:shadow-theme hover:border-accent">
+                        <i class="fab fa-github text-2xl text-accent w-7 text-center flex-shrink-0"></i>
+                        <a href="https://github.com/MuhammadAdeel0072" target="_blank" class="text-theme-secondary hover:text-accent transition-colors break-all">github.com/MuhammadAdeel0072</a>
+                    </div>
+                    <div class="flex items-center gap-4 bg-theme-card p-4 rounded-2xl border border-theme hover:translate-x-1.5 transition-all duration-300 hover:shadow-theme hover:border-accent">
+                        <i class="fab fa-linkedin-in text-2xl text-accent w-7 text-center flex-shrink-0"></i>
+                        <a href="https://www.linkedin.com/in/muhammad-adeel-145a64407" target="_blank" class="text-theme-secondary hover:text-accent transition-colors break-all">linkedin.com/in/muhammad-adeel</a>
+                    </div>
+                </div>
+                <form id="contactForm" class="bg-theme-card p-8 rounded-2xl border border-theme hover:shadow-theme transition-all duration-300">
+                    <div class="mb-5">
+                        <label for="name" class="block font-semibold mb-1.5 text-theme-primary">
+                            Your Name <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" id="name" placeholder="Enter your name" required class="form-input" />
+                    </div>
+                    <div class="mb-5">
+                        <label for="email" class="block font-semibold mb-1.5 text-theme-primary">
+                            Your Email <span class="text-red-500">*</span>
+                        </label>
+                        <input type="email" id="email" placeholder="Enter your email" required class="form-input" />
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block font-semibold mb-1.5 text-theme-primary">
+                            Message <span class="text-red-500">*</span>
+                        </label>
+                        <textarea id="message" placeholder="Write your message here..." required rows="5" class="form-input resize-y min-h-[140px]"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full justify-center">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+    FOOTER
+    ============================================ -->
+    <footer class="text-center py-10 border-t border-theme text-theme-secondary transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-center gap-6 mb-4">
+                <a href="https://github.com/MuhammadAdeel0072" target="_blank" aria-label="GitHub" class="text-2xl text-theme-secondary hover:text-accent hover:-translate-y-1 transition-all duration-300">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/muhammad-adeel-145a64407" target="_blank" aria-label="LinkedIn" class="text-2xl text-theme-secondary hover:text-accent hover:-translate-y-1 transition-all duration-300">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:madeelkhan072@gmail.com" aria-label="Email" class="text-2xl text-theme-secondary hover:text-accent hover:-translate-y-1 transition-all duration-300">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p>&copy; 2026 Muhammad Adeel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./src/script.js"></script>
+</body>
+</html>
