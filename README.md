@@ -9,7 +9,7 @@ The portfolio was built from scratch to strengthen my understanding of **React c
 # 🚀 Live Demo
 
 **Live Website:**
-my-portfolio-rho-eight-26.vercel.app
+https://my-portfolio-rho-eight-26.vercel.app
 
 ---
 
