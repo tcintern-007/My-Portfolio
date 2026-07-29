@@ -1,49 +1,13 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import SectionTitle from './SectionTitle';
 
-const Projects = () => {
-  const projects = [
-    {
-      title: 'DineXis',
-      subtitle: 'Online Web First App',
-      description: 'A comprehensive MERN stack food delivery application featuring real-time order tracking, smart variations, and a mood-based recommendation engine. Built for scale with modern React.',
-      tech: ['React', 'Node.js', 'Express', 'MongoDB'],
-      links: [
-        { label: 'View Code', icon: FaGithub, href: '#' },
-        { label: 'Live Demo', icon: FaExternalLinkAlt, href: '#' }
-      ],
-    },
-    {
-      title: 'CartSy',
-      subtitle: 'Online Shopping System',
-      description: 'A robust Java-based desktop e-commerce application handling inventory management, user authentication, and secure checkout processes.',
-      tech: ['Java', 'Swing', 'MySQL', 'JDBC'],
-      links: [{ label: 'View Code', icon: FaGithub, href: '#' }],
-    },
-    {
-      title: 'TileDesk',
-      subtitle: 'Factory Management System',
-      description: 'An industrial management system designed in Java to streamline factory operations, monitor raw materials, and track production efficiency.',
-      tech: ['Java', 'OOP', 'File Handling'],
-      links: [{ label: 'View Code', icon: FaGithub, href: '#' }],
-    },
-    {
-      title: 'Bank Management System',
-      subtitle: 'Core Banking Engine',
-      description: 'A highly optimized terminal-based banking application built with C++ utilizing advanced data structures for secure transaction processing.',
-      tech: ['C++', 'Data Structures'],
-      links: [{ label: 'View Code', icon: FaGithub, href: '#' }],
-    },
-  ];
+const iconMap = { FaGithub, FaExternalLinkAlt };
 
+const Projects = ({ projects }) => {
   return (
     <section id="projects" className="py-20">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-3">
-          Featured <span className="text-[#6c63ff] dark:text-[#6c63ff] light:text-[#6c63ff] blue:text-[#3b82f6]">Projects</span>
-        </h2>
-        <p className="text-center text-theme-secondary max-w-2xl mx-auto mb-12">
-          Some of my recent work
-        </p>
+        <SectionTitle title="Featured" highlight="Projects" subtitle="Some of my recent work" />
         <div className="grid md:grid-cols-2 gap-7">
           {projects.map((project, index) => (
             <div
@@ -62,7 +26,7 @@ const Projects = () => {
               </div>
               <div className="flex gap-4 flex-wrap">
                 {project.links.map((link, i) => {
-                  const Icon = link.icon;
+                  const Icon = iconMap[link.icon];
                   return (
                     <a
                       key={i}

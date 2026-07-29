@@ -1,36 +1,16 @@
 import { FaLaptopCode, FaGlobe, FaTools } from 'react-icons/fa';
+import SectionTitle from './SectionTitle';
 
-const Skills = () => {
-  const skillCategories = [
-    {
-      title: 'Programming Languages',
-      icon: FaLaptopCode,
-      skills: ['C++', 'Java', 'JavaScript'],
-    },
-    {
-      title: 'Web Development',
-      icon: FaGlobe,
-      skills: ['React.js', 'Next.js', 'Express.js', 'MongoDB', 'MySQL', 'Tailwind CSS'],
-    },
-    {
-      title: 'Tools & Design',
-      icon: FaTools,
-      skills: ['VS Code', 'Git', 'GitHub', 'Figma', 'HCI'],
-    },
-  ];
+const iconMap = { FaLaptopCode, FaGlobe, FaTools };
 
+const Skills = ({ skillCategories }) => {
   return (
     <section id="skills" className="py-20 bg-theme-secondary transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-3">
-          My <span className="text-[#6c63ff] dark:text-[#6c63ff] light:text-[#6c63ff] blue:text-[#3b82f6]">Skills</span>
-        </h2>
-        <p className="text-center text-theme-secondary max-w-2xl mx-auto mb-12">
-          Technologies &amp; tools I work with
-        </p>
+        <SectionTitle title="My" highlight="Skills" subtitle="Technologies & tools I work with" />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => {
-            const Icon = category.icon;
+            const Icon = iconMap[category.icon];
             return (
               <div
                 key={index}

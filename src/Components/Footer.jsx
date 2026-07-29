@@ -1,18 +1,14 @@
 import { FaGithub, FaLinkedinIn, FaEnvelope } from 'react-icons/fa';
 
-const Footer = () => {
-  const socials = [
-    { icon: FaGithub, href: 'https://github.com/MuhammadAdeel0072', label: 'GitHub' },
-    { icon: FaLinkedinIn, href: 'https://www.linkedin.com/in/muhammad-adeel-145a64407', label: 'LinkedIn' },
-    { icon: FaEnvelope, href: 'mailto:madeelkhan072@gmail.com', label: 'Email' },
-  ];
+const iconMap = { FaGithub, FaLinkedinIn, FaEnvelope };
 
+const Footer = ({ socials, copyright }) => {
   return (
     <footer className="text-center py-10 border-t border-theme text-theme-secondary transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex justify-center gap-6 mb-4">
           {socials.map((social, index) => {
-            const Icon = social.icon;
+            const Icon = iconMap[social.icon];
             return (
               <a
                 key={index}
@@ -27,7 +23,7 @@ const Footer = () => {
             );
           })}
         </div>
-        <p>&copy; 2026 Muhammad Adeel. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} {copyright}. All rights reserved.</p>
       </div>
     </footer>
   );

@@ -1,37 +1,28 @@
 import { FaCode, FaDesktop, FaMobileAlt } from 'react-icons/fa';
+import SectionTitle from './SectionTitle';
 
-const About = () => {
-  const stats = [
-    { icon: FaCode, title: 'MERN Stack', desc: 'Building responsive web apps.' },
-    { icon: FaDesktop, title: 'Java Desktop', desc: 'Robust system development.' },
-    { icon: FaMobileAlt, title: 'Learning', desc: 'Android App Development.' },
-  ];
+// Icon mapping
+const iconMap = {
+  FaCode,
+  FaDesktop,
+  FaMobileAlt,
+};
 
+const About = ({ descriptionParagraphs, stats }) => {
   return (
     <section id="about" className="py-20">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-3">
-          About <span className="text-[#6c63ff] dark:text-[#6c63ff] light:text-[#6c63ff] blue:text-[#3b82f6]">Me</span>
-        </h2>
-        <p className="text-center text-theme-secondary max-w-2xl mx-auto mb-12">
-          Get to know the person behind the code
-        </p>
+        <SectionTitle title="About" highlight="Me" subtitle="Get to know the person behind the code" />
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <p className="text-theme-secondary text-lg leading-relaxed mb-4">
-              I am a Software Engineer and MERN developer focused on building impactful digital products.
-              With a strong foundation in both web and desktop application development, I bridge the gap
-              between design and engineering. My passion lies in architecting systems that are not only
-              scalable and efficient under the hood, but also incredibly intuitive and engaging for the end user.
-            </p>
-            <p className="text-theme-secondary text-lg leading-relaxed">
-              Currently, I am expanding my horizons into Android App Development to deliver seamless
-              cross-platform experiences. My ultimate career goal is to build my own software products
-              that solve genuine problems at a global scale.
-            </p>
+            {descriptionParagraphs.map((paragraph, i) => (
+              <p key={i} className="text-theme-secondary text-lg leading-relaxed mb-4">
+                {paragraph}
+              </p>
+            ))}
             <div className="grid grid-cols-3 gap-4 mt-8">
               {stats.map((stat, index) => {
-                const Icon = stat.icon;
+                const Icon = iconMap[stat.icon];
                 return (
                   <div
                     key={index}
@@ -45,7 +36,7 @@ const About = () => {
               })}
             </div>
           </div>
-          <div>{/* Empty div for spacing */}</div>
+          <div>{/* empty for layout */}</div>
         </div>
       </div>
     </section>
