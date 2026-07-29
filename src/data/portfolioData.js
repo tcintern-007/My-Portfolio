@@ -46,7 +46,7 @@ export const projectsData = [
   {
     title: 'DineXis',
     subtitle: 'Online Web First App',
-    description: 'A comprehensive MERN stack food delivery application featuring real-time order tracking, smart variations, and a mood-based recommendation engine. Built for scale with modern React.',
+    description: 'A comprehensive MERN stack food delivery application...',
     tech: ['React', 'Node.js', 'Express', 'MongoDB'],
     links: [
       { label: 'View Code', icon: 'FaGithub', href: '#' },
@@ -56,21 +56,21 @@ export const projectsData = [
   {
     title: 'CartSy',
     subtitle: 'Online Shopping System',
-    description: 'A robust Java-based desktop e-commerce application handling inventory management, user authentication, and secure checkout processes.',
+    description: 'A robust Java-based desktop e-commerce application...',
     tech: ['Java', 'Swing', 'MySQL', 'JDBC'],
     links: [{ label: 'View Code', icon: 'FaGithub', href: '#' }],
   },
   {
     title: 'TileDesk',
     subtitle: 'Factory Management System',
-    description: 'An industrial management system designed in Java to streamline factory operations, monitor raw materials, and track production efficiency.',
+    description: 'An industrial management system designed in Java...',
     tech: ['Java', 'OOP', 'File Handling'],
     links: [{ label: 'View Code', icon: 'FaGithub', href: '#' }],
   },
   {
     title: 'Bank Management System',
     subtitle: 'Core Banking Engine',
-    description: 'A highly optimized terminal-based banking application built with C++ utilizing advanced data structures for secure transaction processing.',
+    description: 'A highly optimized terminal-based banking application built with C++...',
     tech: ['C++', 'Data Structures'],
     links: [{ label: 'View Code', icon: 'FaGithub', href: '#' }],
   },

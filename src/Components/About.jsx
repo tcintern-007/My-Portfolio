@@ -1,25 +1,39 @@
+import { useState } from 'react';
 import { FaCode, FaDesktop, FaMobileAlt } from 'react-icons/fa';
 import SectionTitle from './SectionTitle';
 
-// Icon mapping
-const iconMap = {
-  FaCode,
-  FaDesktop,
-  FaMobileAlt,
-};
+const iconMap = { FaCode, FaDesktop, FaMobileAlt };
 
 const About = ({ descriptionParagraphs, stats }) => {
+  const [showMore, setShowMore] = useState(false);
+
+  // Display only first paragraph when showMore is false
+  const visibleParagraphs = showMore
+    ? descriptionParagraphs
+    : descriptionParagraphs.slice(0, 1);
+
   return (
     <section id="about" className="py-20">
       <div className="max-w-6xl mx-auto px-6">
         <SectionTitle title="About" highlight="Me" subtitle="Get to know the person behind the code" />
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            {descriptionParagraphs.map((paragraph, i) => (
+            {visibleParagraphs.map((paragraph, i) => (
               <p key={i} className="text-theme-secondary text-lg leading-relaxed mb-4">
                 {paragraph}
               </p>
             ))}
+
+            {/* Show More / Show Less Button */}
+            {descriptionParagraphs.length > 1 && (
+              <button
+                onClick={() => setShowMore(!showMore)}
+                className="text-[#6c63ff] dark:text-[#6c63ff] light:text-[#6c63ff] blue:text-[#3b82f6] font-medium hover:underline transition-all duration-300 mb-6"
+              >
+                {showMore ? 'Show Less' : 'Show More'}
+              </button>
+            )}
+
             <div className="grid grid-cols-3 gap-4 mt-8">
               {stats.map((stat, index) => {
                 const Icon = iconMap[stat.icon];

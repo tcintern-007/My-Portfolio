@@ -19,7 +19,7 @@ import {
   footerData,
 } from './data/portfolioData';
 
-import AdeelImage from './assets/Adeel.jpeg'; // Image import remains here
+import AdeelImage from './assets/Adeel.jpeg';
 
 function App() {
   const [theme, setTheme] = useState('dark');
