@@ -97,7 +97,7 @@ const Navbar = ({ theme, setTheme, navLinks }) => {
             ))}
             <div className="flex items-center gap-2 pt-2" style={{ borderTop: `1px solid ${accentColor}33` }}>
               {themes.map((t) => {
-                const Icon = t.icon;
+              //  const Icon = t.icon;
                 const isActive = theme === t.id;
                 return (
                   <button

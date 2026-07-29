@@ -1,6 +1,6 @@
 import { FaPaperPlane, FaCode } from 'react-icons/fa';
 import Button from './Button';
-import AdeelImage from '../assets/Adeel.jpeg';
+//import AdeelImage from '../assets/Adeel.jpeg';
 
 const Hero = ({ name, title, description, image }) => {
   const lines = description.split('\n');
